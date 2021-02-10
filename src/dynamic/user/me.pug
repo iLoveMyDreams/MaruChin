@@ -1,0 +1,47 @@
+doctype html
+include ../includes/head.pug
+script(src="/assets/js/me.js")
+body
+  include ../includes/nav.pug
+  #content
+    span.header
+        img.icon(src=userProfile.displayAvatarURL() width="100px")
+        h1 #{req.user.username}
+        .badge-holder
+            if (admin)
+                span.badge
+                    img(src='https://cdn.glitch.com/e8c2f902-f788-447e-93de-7ee324d08a2a%2FAdmin.png?v=1612975345118' title='Administrador')
+                    |  Administrador
+    br
+    a.button(href='/add') Add a bot
+    #cards
+        each val, i in cards
+            div.large.card
+                if (val.nsfw)
+                    img.icon.nsfw(src=val.logo)
+                else
+                    img.icon(src=val.logo)
+                h2.title #{val.username}
+                    a.likes(href=`/bots/like/${val.botid}`)
+                        i.far.fa-heart
+                        | #{val.likes || 0}
+                p.desc #{val.description}
+                a.small.button(href=`/bots/${val.botid}`) View Bot
+                if (val.state == "deleted")
+                    a.small.half.half-left.button(href=`/bots/resubmit/${val.botid}/`) Resubmit
+                    a.small.half.half-right.button.button-red.delete(href="#confirm" data-id=val.botid data-name=val.username)
+                        |  Delete
+                else
+                    a.small.half.half-left.button(href=`/bots/edit/${val.botid}/`) Edit Bot
+                    a.small.half.half-right.button.button-red.delete(href="#confirm" data-id=val.botid data-name=val.username)
+                        |  Delete
+    br
+    span.center
+        a(href='/join') Join Server
+        |   |  
+        a(href='/add') Add a bot
+        |   |  
+        a(href='/api/theme') Toggle theme
+        |   |  
+        a(href='/logout') Logout
+        br

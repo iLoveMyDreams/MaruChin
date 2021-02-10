@@ -1,0 +1,16 @@
+doctype html
+include includes/head.pug
+body(onload="load()")
+    include includes/nav.pug
+    #content
+        span.header
+            h1 Maruchan Bot List
+            p Solo otra lista de bots para Discord
+
+        #searchMore
+            | Te gustaria
+            a(href='/bots/search/') buscar todos los bots
+        #cards
+            span#loading Cargando...
+
+

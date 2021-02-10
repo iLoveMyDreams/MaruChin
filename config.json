@@ -1,0 +1,41 @@
+{
+    "mongo_url": "mongodb+srv://Arita:dreams2021@cluster0.jdurt.mongodb.net/Arita?retryWrites=true&w=majority",
+    "server": {
+        "id": "808810695054589974",
+        "invite": "https://discord.gg/rvg3tqYEea",
+        "mod_log_id": "808810730743791636",
+        "like_log": "808810756056940605",
+        "admin_user_ids": ["797900605859299399"],
+        "role_ids": {
+            "bot": "808810906355761182",
+            "unverified": "808810919740178452",
+            "verified": "808810923242160148",
+
+            "bot_developer": "808810941004120164",
+            "bot_verifier": "808810936890032168"
+        }
+    },
+    "bot_options": {
+        "bot_tags": ["Simple"],
+        "max_bot_tags": 6,
+        "max_owners_count": 4,
+        "max_summary_length": 120,
+        "min_description_length": 200,
+        "max_description_length": 500
+    },
+    "discord_client": {
+        "id": "804448311603888138",
+        "secret": "Xy44TTSv1NuMHjSxe0sEktzHeUhHIwjA",
+        "token": "ODA0NDQ4MzExNjAzODg4MTM4.YBMe3w.TbhtRnV6OnHqCTPD6bjmExfBa8Q",
+        "prefix": "m!"
+    },
+    "web": {
+        "domain_with_protocol": "https://maruchan-list.glitch.me",
+        "port": 3000,
+        "ratelimit": 30,
+        "recaptcha_v2": {
+            "site_key": "6LfYXlEaAAAAAJ9lriPtjrsFJYHHjJh8Avs-Dh0V",
+            "secret_key": "6LfYXlEaAAAAABItGQwqd62ShwfTMGIt4Qxdt2Sn"
+        }
+    }
+}
